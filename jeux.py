@@ -6,9 +6,6 @@ from wordle import *
 from juste_prix import *
 
 #tkinter
-#morpion VS J2
-#morpion VS IA
-#snake
 
 continuer = True
 while continuer == True:
