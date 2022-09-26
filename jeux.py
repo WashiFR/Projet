@@ -2,6 +2,7 @@ from tkinter import *
 from main import jeu_combat
 import random
 
+#Veuillez mettre votre propre path, en voici un exemple :
 path = '/Users/loris/OneDrive/Documents/VSCode/Python/Tkinter/assets/'
 
 ft = ("Courrier", 20)
