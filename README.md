@@ -1,8 +1,3 @@
-# Projet
-Un Pierre-Feuille-Ciseau en Tkinter que j'ai faits puis auquel j'ai ajouté mon jeu de combat en python fait pour le projet de fin d'année de première en NSI.
-
-[TOC]
-
 # Changer le path (répertoire fichiers)
 
 N'ayant pas trouvé de moyen de détecter le path de l'utilisateur, ou encore de mettre le path une fois puis de le réutiliser (cela engendre des erreurs), il vous faudra changer le path vous-même pour avoir accès aux images. Pour cela copié le lien de votre répertoire où ce trouve les fichiers que vous avez installés. Cela devrait ressemblé à quelque chose comme ça :
