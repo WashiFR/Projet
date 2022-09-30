@@ -8,7 +8,7 @@ N'ayant pas trouvé de moyen de détecter le path de l'utilisateur, ou encore de
 >
 > *Vous n'aurez pas exactement les mêmes nom, ceci est juste un exemple.*
 
-**<span style="color:red">Attention : Ne modifiez pas les noms des images, comme par exemple `bg.jpg`, `button.png`. Ajouter juste votre path devant. De plus si dans le paths il n'y a que le nom du dossier écrit, mettez aussi que le nom du dossier dans lequel vous avez mis vos fichiers.</span>**
+**<span style="color:red">Attention : Ne modifiez pas ce qui se trouve après les `../assets/`. Ajouter juste votre path devant. De plus si dans le paths il n'y a que le nom du dossier écrit, mettez aussi que le nom du dossier dans lequel vous avez mis vos fichiers.</span>**
 
 Voici les endroit où mettre votre path dans le fichier :
 
