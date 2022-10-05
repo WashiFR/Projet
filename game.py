@@ -1,6 +1,10 @@
+import imp
 import pygame
 from player import *
 from sound import SoundManager
+import os
+
+path = os.path.dirname(os.path.abspath(__file__))
 
 # seconde class qui va représenter le jeu
 class Game:
@@ -12,7 +16,7 @@ class Game:
         self.text1 = ""
         self.text2 = ""
         self.sound_manager = SoundManager()
-        self.font = pygame.font.Font('Projet/assets/my_custom_font.ttf', 25)
+        self.font = pygame.font.Font(path + '/assets/my_custom_font.ttf', 25)
 
     def a_qui_le_tour(self):
         if self.tour_j2 == True:
@@ -30,7 +34,7 @@ class Game:
         elif player.player_animation:
             player.update_animation()
         else:
-            player.image = pygame.image.load(f'Projet/assets/{sprite_name}.png')
+            player.image = pygame.image.load(path + f'/assets/{sprite_name}.png')
             if player.image_sens == 1:
                 player.image = pygame.transform.flip(player.image, 1, 0)
         # appliquer l'image de mon joueur
@@ -103,6 +107,6 @@ class Game:
         self.is_playing = False
 
     def screen_game_over(self, screen, i):
-        font = pygame.font.Font('Projet/assets/my_custom_font.ttf', 70) 
+        font = pygame.font.Font(path + '/assets/my_custom_font.ttf', 70) 
         text = font.render("Joueur " + i + " vainqueur ! ", 1, (255, 255, 255))
         screen.blit(text, (200, 200))

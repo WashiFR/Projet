@@ -1,6 +1,9 @@
 import pygame
 import animation
+import os
 from random import randint
+
+path = os.path.dirname(os.path.abspath(__file__))
 
 # créer une première class qui va représenter le joueur
 class AllPlayer(animation.AnimateSprite):
@@ -22,7 +25,7 @@ class AllPlayer(animation.AnimateSprite):
         self.max_ki = 200
         self.attack = 20
         self.rect.y = 300
-        self.font = pygame.font.Font('Projet/assets/my_custom_font.ttf', 10)
+        self.font = pygame.font.Font(path + '/assets/my_custom_font.ttf', 10)
 
     def get_name(self):
         return self.name

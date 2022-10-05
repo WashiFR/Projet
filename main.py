@@ -1,8 +1,11 @@
 import pygame
 import math
+import os
 from player import *
 from game import Game
 pygame.init()
+
+path = os.path.dirname(os.path.abspath(__file__))
 
 def jeu_combat():
 
@@ -11,31 +14,31 @@ def jeu_combat():
     screen = pygame.display.set_mode((1080, 700)) # définir la taille de la fenêtre
 
     # importer et charger l'arrière plan du jeu
-    background = pygame.image.load("Projet/assets/bg.jpg") # importer l'image
+    background = pygame.image.load(path + "/assets/bg.jpg") # importer l'image
 
     # importer les boutons
-    play_button = pygame.image.load("Projet/assets/button.png")
+    play_button = pygame.image.load(path + "/assets/button.png")
     play_button = pygame.transform.scale(play_button, (400, 150))
     play_button_rect = play_button.get_rect()
     play_button_rect.x = math.ceil(screen.get_width() / 3.33)
     play_button_rect.y = math.ceil(screen.get_height() / 2)
 
-    button_attaque = pygame.image.load("Projet/assets/bouton_attaque.png")
+    button_attaque = pygame.image.load(path + "/assets/bouton_attaque.png")
     button_attaque_rect = button_attaque.get_rect()
     button_attaque_rect.x = 0
     button_attaque_rect.y = 510
 
-    button_attaque_spe = pygame.image.load("Projet/assets/bouton_attaque_special.png")
+    button_attaque_spe = pygame.image.load(path + "/assets/bouton_attaque_special.png")
     button_attaque_spe_rect = button_attaque_spe.get_rect()
     button_attaque_spe_rect.x = 260
     button_attaque_spe_rect.y = 510
 
-    button_ki = pygame.image.load("Projet/assets/bouton_ki.png")
+    button_ki = pygame.image.load(path + "/assets/bouton_ki.png")
     button_ki_rect = button_ki.get_rect()
     button_ki_rect.x = 520
     button_ki_rect.y = 510 
 
-    button_ulti = pygame.image.load("Projet/assets/bouton_ulti.png")
+    button_ulti = pygame.image.load(path + "/assets/bouton_ulti.png")
     button_ulti_rect = button_ulti.get_rect()
     button_ulti_rect.x = 780
     button_ulti_rect.y = 510
@@ -43,7 +46,7 @@ def jeu_combat():
     # charger le jeu
     game = Game()
 
-    font = pygame.font.Font('Projet/assets/my_custom_font.ttf', 70)
+    font = pygame.font.Font(path + '/assets/my_custom_font.ttf', 70)
     lunched = True
     choix = True
     choix2 = True

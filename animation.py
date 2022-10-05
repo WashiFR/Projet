@@ -2,6 +2,10 @@ import pygame
 import game
 import player
 from random import randint
+import os
+
+# permet de trouver l'ndroit où se trouve le fichier
+current_path = os.path.dirname(os.path.abspath(__file__))
 
 class AnimateSprite(pygame.sprite.Sprite):
 
@@ -34,7 +38,7 @@ class AnimateSprite(pygame.sprite.Sprite):
         self.images_attack = animations_attack.get(sprite_name)
         self.images_ulti = animations_ulti.get(sprite_name)
         
-        self.image = pygame.image.load(f'Projet/assets/{sprite_name}.png')
+        self.image = pygame.image.load(current_path + f'/assets/{sprite_name}.png')
 
     def animate(self):
         self.current_image += 1
@@ -104,7 +108,7 @@ class AnimateSprite(pygame.sprite.Sprite):
 def load_animation_images(sprite_name):
     images = []
     
-    path = f'Projet/assets/{sprite_name}/{sprite_name}'
+    path = current_path + f'/assets/{sprite_name}/{sprite_name}'
     
     for num in range(1, 1):
         image_path = path + " (" + str(num) + ').gif'
@@ -124,7 +128,7 @@ def load_dead_animation_images(sprite_name):
     elif sprite_name == 'risitas':
         i = 43
     
-    path = f'Projet/assets/{sprite_name}_dead/{sprite_name}_dead'
+    path = current_path + f'/assets/{sprite_name}_dead/{sprite_name}_dead'
     
     for num in range(1, i):
         image_path = path + " (" + str(num) + ').gif'
@@ -137,7 +141,7 @@ def load_dead_animation_images(sprite_name):
 def load_attack_animation_images(sprite_name):
     images_attack = []
     
-    path = f'Projet/assets/{sprite_name}_attack/{sprite_name}_attack'
+    path = current_path + f'/assets/{sprite_name}_attack/{sprite_name}_attack'
 
     if sprite_name == 'tyler1':
         i = 137
@@ -155,7 +159,7 @@ def load_attack_animation_images(sprite_name):
 def load_ulti_animation_images(sprite_name):
     images_ulti = []
     
-    path = f'Projet/assets/{sprite_name}_ulti/{sprite_name}_ulti'
+    path = current_path + f'/assets/{sprite_name}_ulti/{sprite_name}_ulti'
 
     if sprite_name == 'jotaro':
         i = 40
