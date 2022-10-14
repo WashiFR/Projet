@@ -8,7 +8,7 @@ Si cela ne marche pas, rendez-vous sur le site de <a href="https://www.pygame.or
 
 Pour exécuter le programme, il faut lancer le fichier `jeux.py`, pour cela vous pouvez :
 
-* utiliser la flèche en haut à droite ;
+* utiliser la flèche en haut à droite (sur Visual Code Studio) ;
 
 * utiliser le raccourci `Ctrl+F5` en étant dans le fichier ;
 
