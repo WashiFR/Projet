@@ -12,4 +12,4 @@ Pour exécuter le programme, il faut lancer le fichier `jeux.py`, pour cela vous
 
 * utiliser le raccourci `Ctrl+F5` en étant dans le fichier ;
 
-* écrire dans le terminal de commande `py jeux.py`.
+* écrire dans le terminal de commande `py jeux.py` (si votre fichier et dans un document, tapez `cd *NomFichier*` jusuq'à que vous soyer dans le dossier ou se trouve le fichier).
